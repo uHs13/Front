@@ -1,3 +1,2 @@
 #Front
-
-Firme e forte, guerreiro de fé.
+Firme e forte, guerreiro de fÃ©.
