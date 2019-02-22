@@ -1,0 +1,11 @@
+*{
+    background-color: #fff;
+    margin-left: 13px;
+    margin-top: 13px;
+}
+.paragrafo{
+    font-family: Helvetica, Arial;
+    color:green;
+    font-size: 39px;
+    width: 100px;
+}
