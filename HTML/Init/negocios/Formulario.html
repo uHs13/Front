@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+    <style>
+        /* CSS Document */
+
+html {
+	background-color:#F4F4F4;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+  
+}
+
+body {
+	width:560px;
+	border:1px solid #ddd;
+	margin:10px auto;
+	background-color:#FFF;
+	padding:10px 30px;
+    border-radius:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:30px;
+	font-style:italic;
+	letter-spacing:-0.05em;
+	color:rgb(231, 88, 17);
+	margin:2px 23px 15px;
+    text-shadow:1px 1px 2px #666;
+    
+}
+
+input {
+	display:block;
+	margin-bottom:20px;
+	border:1px solid #999;
+	padding:8px;
+    border-radius:3px;
+}
+
+input:focus {
+	border:1px solid #ccc;
+	outline:none;
+}
+
+input[type=submit] {
+	width:100px;
+	color:#FFF;
+	background:linear-gradient(top, #F33, #933 );
+	background:-webkit-linear-gradient(top, #F33, #933 );
+	background:-moz-linear-gradient(top, #F33, #933 );
+	border:1px solid #333;
+    cursor:crosshair;
+    margin: auto;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <caption>
+                <p class='title'> Formulário</p>
+            </caption>
+        </header>
+
+        <section class='form'>
+            <form action="">
+
+                <input type="text" id='name' placeholder="Name" required autofocus>
+
+                <input type="number" id='idade' placeholder="idade" required min="1" max="100">
+
+                <input type="date" id='nascimento' required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
+
+                <input type="password" id='password' placeholder="Password" required>
+
+                <input type="submit" value='Enviar'>
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>
