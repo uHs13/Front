@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DataList</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 73px;
+            background-color: aqua;
+        }
+
+        .input {
+            /* Deixa os elementos input do formulário um abaixo do outro */
+            display: block;
+            margin-top: 10px;
+            width: 300px;
+            height: 25px;
+            border-radius: 5px;
+            background-color: #fafafa;
+            border: 1px solid rgb(148, 148, 148);
+            padding-left: 8px;
+            padding-bottom: 3px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            
+
+        }
+
+        input:focus{
+
+            outline: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" list='music' class='input' id='musicas' placeholder="Pesquise uma musica">
+
+        <dataList id='music'>
+
+            <option value="Hello">Hello</option>
+            <option value="Chin Check">Chin Check</option>
+            <option value="Still">Still</option>
+            <option value="Gangsta rap made me do it">Gangsta rap made me do it</option>
+            <option value="This is Los Angeles">This is Los Angeles</option>
+            <option value="I´ll hurt you">I´ll hurt you</option>
+        </dataList>
+        <input type="range" id='value' class='input' min='1' max='13' value='1' onchange="changeValue()">
+        <span id='result'></span>
+
+        <input type='color' id='color' class='input' value="#00ffff" onchange="changeColor()">
+        <input type="search" class='input' name='pesquisa'>
+    </form>
+    <script>
+        function changeValue() {
+
+            document.querySelector("#result").innerHTML = document.querySelector("#value").value;
+        
+        }
+
+        function changeColor(){
+            document.querySelector("body").style.backgroundColor = document.querySelector("#color").value;
+        }
+    </script>
+</body>
+
+</html>
