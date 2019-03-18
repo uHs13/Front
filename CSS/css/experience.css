@@ -1,0 +1,82 @@
+body{
+
+    background-color:#fff;
+    margin:0px; /* Espaço entre a borda do documento e o conteúdo do site  */
+    /* Centraliza a imagem e deixa ela cobrindo o background */
+    background: url(../_res/mvbill.jpg) no-repeat left top fixed;
+    background-size: cover;
+   
+   
+    
+    
+}
+
+p{
+
+    text-align: center;
+    text-indent:.5em;/* Espaço a margem e o inicio do parágrafo */
+    font-family:'Raleway';
+    font-size:95%;
+    margin: 15px 5px;/*top/bottom right/left*/
+
+
+}
+
+.reports{
+
+    white-space: pre;
+
+
+}
+
+.msctitle{
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:35px;
+    
+}
+
+.msctitle a{
+
+    text-decoration:none;
+    font-weight: bold;
+    color:black;
+
+}
+
+
+
+#center{
+
+    /*centraliza o elemento*/
+    width:600px;
+    
+    margin: 80px auto;
+    padding: 2px 4px; /*top/bottom right/left*/
+
+    text-align: center;/*centraliza o texto*/
+
+    
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px 1px rgb(65, 63, 63);
+    
+}
+
+/*#center:hover{
+
+    box-shadow: 1px 1px 6px 1px rgb(219, 219, 219);
+    border:none;
+
+}
+*/
+
+#rights{
+
+    text-align: right;
+    padding-right:5px;
+    text-shadow: 1px 1px rgb(207, 206, 206);
+
+}

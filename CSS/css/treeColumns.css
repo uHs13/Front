@@ -1,0 +1,101 @@
+body{
+
+    background-color: rgb(228, 225, 225);
+    
+}
+
+main{
+
+    margin:0 auto;
+    width: 70%;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgb(129, 128, 128);
+    font-family:'Raleway';
+    color:white;
+    text-align: center;
+    
+
+}
+
+main:after{
+
+    content:"";
+    clear:both;
+    display: table;
+
+}
+
+section,header,footer{
+
+    display: block;
+
+}
+
+header{
+
+    text-align: center;
+    background-color: orange;
+    height: 40px;
+    margin-bottom:5px;
+    line-height: 40px;
+  
+
+}
+
+
+
+section{
+
+    
+    max-height: 600px;
+    margin-bottom:5px;
+    
+}
+
+footer{
+
+    background-color: rgb(5, 87, 25);
+    line-height: 40px;
+    clear: both;/* como o clear both impede que tenhamos algum elemento na direita ou esquerda do elemento, o footer não vai entrar no meio das duas colunas se houver espaço*/
+    /* padding:5px; */
+    height: 40px;
+    /* margin-top:10px;  Como os dois elementos de cima estão flutuando não conseguimos aplicar margin-top*/
+}
+
+
+.fl{
+
+    background-color: blue;
+    line-height: 400px;
+    height:400px;
+    float:left;
+    width: 32%;
+    
+    
+
+}
+
+.fc{
+
+    background-color: rgb(116, 16, 66);
+    line-height: 400px;
+    height:400px;
+    float:left;
+    width: 32%;
+    margin-left:20px;
+    
+
+
+}
+
+
+.fr{
+
+    background-color: blueviolet;
+    line-height: 400px;
+    height:400px;
+    width: 32%;
+    float: right; 
+
+    
+}

@@ -1,0 +1,97 @@
+body{
+
+    background-color:antiquewhite;
+    /* background:linear-gradient(90deg, white, lightgray); */
+    /* background:radial-gradient(white,black); */
+   
+
+}
+
+.sheet{
+
+    display: block;
+    justify-content : center;
+    align-items: center;
+    margin:30px 70px 0px;/*margin:top right bottom left; margin: top/bottom right/left; margin:top right/left bottom*/
+    padding:2px 0px 10px;/*padding: top right bottom left; padding top/bottom right/left; padding: top right/left bottom*/
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow : 3px 3px 3px #8b8a8a;
+
+}
+
+.title{
+
+    display: flex;
+    justify-content: center;            /* Centraliza o texto na tela */
+    font-family: 'Kalam', cursive;
+    font-size: 3em;
+    margin-top:30px;
+    text-decoration:overline;
+
+}
+
+.text-container{
+
+    /* Centralzia o texto e mantem o formato de quebra de linha*/
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.f1{
+
+  text-align:left;
+  font-size:1.1em;
+  text-decoration: line-through; /*underline, overline, line-throught */
+  text-transform: lowercase;
+  text-indent:2em;/* Espaço a margem e o inicio do parágrafo */
+
+}
+
+.f2{
+
+    text-align:center;
+    font-size:1em;
+    text-decoration: underline;
+    text-transform:capitalize;/* lowercase,capitalize,uppercase */
+}
+
+.f3{
+    /* text-align: alinhamento do texto - left,center,right,justify */
+    text-align:justify;
+    font-size:.9em;
+    margin-left:5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* letter-spacing ; word-spacing ; */
+    
+
+}
+
+.btn{
+
+   margin: 2% 45%;
+   width:100px;
+   height:30px;
+   border-radius: 5px;
+   border:solid 1px brown;
+   color:brown;
+   background-color: transparent;
+   outline: none;/* Tira a borda quando clica */
+   
+
+}
+
+.btn:hover{
+
+    background-color: brown;
+    color: rgb(20, 1, 1);
+    box-shadow: 3px 3px 3px #8b8a8a; /*box-shadow: lateral(- <--  --> + ) cima/baixo(- cima + baixo)  blur  color*/
+   
+
+
+}
