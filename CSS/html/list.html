@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listas</title>
+
+    <style>
+    
+        ul,ol{
+
+            background-color: #bbb;
+            margin:3px;
+            padding:0;
+            /* padding 0 retira o espaço onde ficavam os simbolos de item de lista */
+
+        }
+        
+        li{
+
+            background-color: aliceblue;
+            /* list-style-position: inside; Coloca os simbolos que representam cada item da lista dentro do <li> junto com o conteúdo */
+
+            list-style-type:none;
+            /* troca o simbolo dos itens da lista */
+        }
+
+        li:first-child{ /* Altera o comportamento do primeiro elemento da lista*/
+
+            color:orange;
+
+        }
+        
+        li:last-child{ /* Altera o comportamento do ultimo elemento da lista*/
+
+            color:red;
+
+
+        }
+
+        li:nth-child(3){ /* Altera o item que tiver o index passado entre parenteses. Odd e even alteram os itens impares e pares respectivamente */
+
+            color:brown;
+
+        }
+    
+    
+    </style>
+
+</head>
+<body>
+    
+    <main>
+
+
+        <ul>
+
+            <li>Brasil</li>
+            <li>Moçambique</li>
+            <li>Angola</li>
+            <li>Cabo Verde</li>
+            <li>Portugal</li>
+
+        </ul>
+
+        <ol>
+
+            <li>Brasil</li>
+            <li>Moçambique</li>
+            <li>Angola</li>
+            <li>Cabo Verde</li>
+            <li>Portugal</li>
+
+        </ol>
+
+
+
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+
+    <title>Horizontal Menu</title>
+
+    <style>
+    
+       main{
+
+            font-family:'Raleway';
+            width:90%;
+            margin:0 auto;
+
+       }
+
+       nav{
+
+            width:90%;
+            margin:0 auto;
+            
+
+       }
+
+       nav ul{
+
+            margin:0;
+            padding:0;
+            list-style:none;
+            width:90%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+
+
+       }
+
+       nav ul li{
+
+            float:left;
+            position:relative;
+            
+           
+
+       }
+
+       /* Main menu */
+       nav ul li a{
+
+            display:inline-block;
+            text-decoration: none;
+            background-color: #000;
+            color:white;
+            border-radius: 3px;
+            padding:5px 10px; /* cima/baixo esquerda/direita */
+            border:1px solid #000;
+            margin-right:1px;
+            width:80px;
+            text-align: center;
+
+       }
+
+       /* sub menu */
+       nav ul li ul{
+
+            display:none;
+            position:absolute;
+            padding-top:1px;
+
+       }
+
+       /* sub menu itens */
+       nav ul li ul li a{
+
+            width:220px;/* tem que ser em px pra todos ficarem do mesmo tamanho */
+            text-align: center;
+            margin-top: 1px;
+
+       }
+
+       nav ul li ul li a:hover{
+
+
+       }
+
+       /* the cat jump*/
+       nav li:hover ul{
+
+            display:block;
+            
+
+       }
+
+       nav ul li a:hover{
+
+            border:1px solid #fff;
+            background-color: #fff;
+            color:black;
+            box-shadow: 2px 2px 5px 1px #cccccc;
+
+       }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <main>
+
+        <nav>
+
+            <ul>
+
+                <li><a href='#'>Ice Cube</a>
+                
+                     <ul>
+
+                        <li><a href="https://www.youtube.com/watch?v=aL7NbMjrmQA" target='_blank'>Gangsta rap made me do it</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=3SIEN9mrruA" target='_blank'>I rep that west</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=UfHAXiReMXE" target='_blank'>Get used to it</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=pQ9AE6P5ERs" target='_blank'>Go to Church</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=7Khy9_XT860" target='_blank'>Jack in the box</a></li>
+    
+                     </ul>
+     
+                </li>
+
+                <li> <a href="#"> Wc </a> 
+                
+                    <ul>
+
+                            <li><a href="https://www.youtube.com/watch?v=eA6pns1wKbY" target='_blank'>This is Los Angeles</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=V1-AFRMozcE" target='_blank'>Paranoid</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=ueH10UdoVaI" target='_blank'>Guilty by Affiliation</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=sxOlABwWI0A" target='_blank'>Jack and the bean stalk</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wC0zXCg811w" target='_blank'>Just Clownin</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=FA91ExYlnbA" target='_blank'>The Streets</a></li>
+        
+                    </ul>
+                
+                </li>
+
+
+
+            </ul>
+
+
+        </nav>
+
+    </main>
+
+</body>
+</html>
