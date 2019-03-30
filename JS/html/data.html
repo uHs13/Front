@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data</title>
+</head>
+<body>
+    
+    <main>
+
+        <section>
+
+            <label for="date">data,hora e fuso horário</label>
+            <p id='date'></p>
+
+            <label for="dateFormatted">data e hora formatados</label>
+            <p id='dateFormatted'></p>
+
+        </section>
+
+
+
+    </main>
+
+
+    <script>
+
+        class MyDate{
+
+            constructor(){
+
+                this._mydate = new Date(); 
+                this._locale = 'pt-BR';
+                this._dateEl = document.querySelector('#date');
+                this._dateFormatedEl = document.querySelector('#dateFormatted');
+                this.init();
+            }
+
+            get mydate(){
+                
+                return this._mydate;
+
+            }
+
+            get locale(){
+
+                return this._locale;
+
+            }
+
+            get dateEl (){
+
+                return this._dateEl;
+
+            }
+
+            get dateFormattedEl(){
+
+                return this._dateFormatedEl
+
+            }
+
+            set dateEl(value){
+
+                this._dateEl.innerHTML = value; 
+
+            }
+
+            set dateFormattedEl(value){
+
+                this._dateFormatedEl.innerHTML = value; 
+
+            }
+
+            init(){
+
+                this.dateEl = this.mydate;//mostra a data , a hora e o fudo horário
+               
+
+                    this.dateFormattedEl =  this.mydate.toLocaleDateString(this.locale,{
+
+                    day:'2-digit',
+                    month:'2-digit',
+                    year:'2-digit'
+
+                    })+ ' '+ this.mydate.toLocaleTimeString(this.locale);
+
+               
+
+                
+
+            }
+
+
+
+
+
+        }
+
+        let date = new MyDate();
+           
+        
+        
+        
+      
+
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mega Sena</title>
+   
+</head>
+<body>
+
+    <main>
+
+        <label for="container">Números sorteados</label>
+        <section id='container'></section>
+
+
+    </main>
+
+    <script>
+    
+            class MegaSena{
+    
+                constructor(){
+                    
+                    this._numbersEl  = document.querySelector('#container');
+                    this.init();
+    
+                }//fim constructor
+                
+                init(){
+
+                    this.numbersEl = this.numberRaffle(6);
+
+                }
+                
+                set numbersEl(value){
+
+                    this._numbersEl.innerHTML = value;
+
+                }//Fim numbersEl
+    
+                numberRaffle(max){//max determina quantos números você quer dentro do array
+    
+                    let numbers = new Array();
+                    
+    
+                    for(let i = 0; numbers.length < max ; i++ ){
+    
+                        let number = Math.floor((Math.random()*60)+1);
+                         
+                        if (  numbers.indexOf(number) < 0 ) {// Se o número não existe no array podemos adicioná-lo ao array
+    
+                            numbers.push(number);
+                                
+                        } 
+    
+                    }
+
+                     //sort ordena strings;
+
+                     //aplicando o sort normal ( numbers.sort() ) o array ordena os números como strings, os números que têm 1 na primeira posição vêm antes dos que tem 2 na segunda posição, e assim sucessivamente
+                     return  numbers.sort((a,b)=>a-b);//não pode ter chaves depois da '''flecha''' ;
+                     //(a,b)=>a-b -> faz a subtração a-b . Se der um valor positivo quer dizer que a>b e b assume a posição de menor índice. Se der negativo a<b, tudo certo.
+                    
+                }//fim numberRaffle
+    
+    
+    
+            }//fim MegaSena
+    
+            let number = new MegaSena();
+        
+        
+        </script>
+</body>
+</html>

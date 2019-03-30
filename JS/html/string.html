@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String</title>
+</head>
+<body>
+
+
+    <script>
+        
+        let frase = 'Quatro minutos se passaram e ninguém viu';
+    
+        console.log(`--- Frase : ${frase} --- `);
+        console.log(`Primeira letra -> ${frase.charAt(0)}`);
+        console.log(`Segunda letra -> ${frase.charAt(1)}`);
+        console.log(`Terceira letra -> ${frase.charAt(2)}`);
+
+        console.log('-----------------------');
+        let palavra = [];
+        for(let i = 0; frase.charAt(i)!= ' ' ; i++){//pega a primeira palavra da frase
+
+            palavra.push(frase.charAt(i));
+            
+           
+        }
+        console.log(`Primeira palavra com charAt() -> ${palavra.join('')}`);
+        //array.join(elemento) -> junta elementos de um array colocando entre eles o elemento passado;
+        
+
+        for( let i = 0;frase.charAt(i)!=' ';i++){
+
+            palavra.push(frase.substr(0,frase.charAt(i)));
+            //console.log(frase.substr(0,5));//faz uma sub string com os elementos entre o indice inicial e o final p
+            //string.substr(inicio,fim); 
+
+
+
+        }
+
+        console.log(`Primeira palavra com substr() -> ${palavra.join('')}`);
+
+        palavra = frase.split(' ');
+        //string.split(elementoDivisor);
+
+        console.log(`Primeira palavra com split() -> ${palavra[0]}`);
+        
+        console.log('-----------------------');
+        
+        console.log(`MAIÚSCULO:${frase.toUpperCase()}`);
+        console.log(`minúsculo:${frase.toLowerCase()}`);
+
+        let phrase = new Array(); 
+
+        palavra = frase.toLowerCase().split(' ');//colocamos a frase toda em letra minúscula
+
+        palavra.forEach((piece)=>{
+
+            phrase.push(piece.charAt(0).toUpperCase()+piece.substr(1,piece.length));
+                        //primeira letra maiuscula   + resto do pedaço sem a primeira letra 
+        });
+
+        console.log(`Primeira letra maiúscula: ${phrase.join(' ')}`);
+
+        phrase = []; //esvaziamos o phrase pra não ocorrer nenhum erro
+
+        palavra = frase.toUpperCase().split(' ');//colocamos a frase toda em letra minúscula
+
+        palavra.forEach((piece)=>{
+
+            phrase.push(piece.charAt(0).toLowerCase()+piece.substr(1,piece.length));
+                        //primeira letra maiuscula   + resto do pedaço sem a primeira letra 
+        });
+
+        console.log(`Primeira letra minúscula: ${phrase.join(' ')}`);
+
+        
+
+
+    </script>
+</body>
+</html>

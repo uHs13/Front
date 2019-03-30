@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+    <script>
+    
+        let fruits = new Array();//let fruit = []; 
+
+        fruits.push('Laranja','Uva','Maça','Banana','Mexirica','Abacaxi','Limão','Morango');//adiciona no final
+        // fruits.unshift(0);//adiciona no inicio do array
+
+        //console.log(fruits);
+
+        function removeValue(array){
+
+            //  return (array.length > 0) ? array.pop() : false ;
+                //array.length retorna o numero de elementos do array
+
+            return (array.length > 0) ? array.shift() : false ;
+            //array.shift() exclui o primeiro elemento
+
+        }
+
+        setInterval(()=>{
+            
+            x = removeValue(fruits);
+            
+            (x)?console.log(`Removida:${x}`):false;
+           
+
+        },1000);
+
+        
+
+
+        
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

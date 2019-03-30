@@ -11,7 +11,7 @@ class Essencial{
         this.init();
     }
     
-    
+    //GETTERS AND SETTERS
     get name(){//método
 
         return this._name;
@@ -53,6 +53,8 @@ class Essencial{
         return this._formEl;
 
     }
+
+    //FIM GETTERS AND SETTERS
 
     init(){
 
