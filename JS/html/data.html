@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
     <title>Data</title>
+    <style>
+        main {
+
+            width: 50%;
+            margin: 0 auto;
+            position: relative;
+            top: 50px;
+            font-family: 'Raleway';
+
+
+        }
+
+        label {
+
+            color: black;
+            font-weight: bold;
+
+        }
+
+        p {
+
+            width: 600px;
+            line-height: 30px;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        p:hover{
+
+            border-color:rgb(56, 56, 56);
+            transition: border-color 0.5s linear 0.1s;
+
+        }
+
+    </style>
 </head>
+
 <body>
-    
+
     <main>
 
         <section>
 
-            <label for="date">data,hora e fuso horário</label>
+            
             <p id='date'></p>
 
-            <label for="dateFormatted">data e hora formatados</label>
+            
             <p id='dateFormatted'></p>
 
         </section>
@@ -25,89 +64,8 @@
     </main>
 
 
-    <script>
-
-        class MyDate{
-
-            constructor(){
-
-                this._mydate = new Date(); 
-                this._locale = 'pt-BR';
-                this._dateEl = document.querySelector('#date');
-                this._dateFormatedEl = document.querySelector('#dateFormatted');
-                this.init();
-            }
-
-            get mydate(){
-                
-                return this._mydate;
-
-            }
-
-            get locale(){
-
-                return this._locale;
-
-            }
-
-            get dateEl (){
-
-                return this._dateEl;
-
-            }
-
-            get dateFormattedEl(){
-
-                return this._dateFormatedEl
-
-            }
-
-            set dateEl(value){
-
-                this._dateEl.innerHTML = value; 
-
-            }
-
-            set dateFormattedEl(value){
-
-                this._dateFormatedEl.innerHTML = value; 
-
-            }
-
-            init(){
-
-                this.dateEl = this.mydate;//mostra a data , a hora e o fudo horário
-               
-
-                    this.dateFormattedEl =  this.mydate.toLocaleDateString(this.locale,{
-
-                    day:'2-digit',
-                    month:'2-digit',
-                    year:'2-digit'
-
-                    })+ ' '+ this.mydate.toLocaleTimeString(this.locale);
-
-               
-
-                
-
-            }
-
-
-
-
-
-        }
-
-        let date = new MyDate();
-           
-        
-        
-        
-      
-
-       
-
-    </script>
+    <script src='../scripts/MyDate.js'></script>
+    <script src="../scripts/connection.js"></script>
 </body>
+
 </html>

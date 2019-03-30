@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json</title>
+</head>
+<body>
+    <script>
+        
+        let json = {
+
+            nome:'Caderno',
+            valor:5.70,
+            cor:'preto',
+            dimensoes:'27cm x 17cm'
+        }    
+        
+
+        console.log(json);
+
+        function criaJson(nome,idade){
+
+            let json = {
+
+                nome,
+                idade //Ecma Script 6 -> quando chave e valor tem o mesmo nome podemos colocar apenas uma vez
+
+            }
+
+            return json;
+
+        }
+
+        console.log(criaJson('Heitor',18));
+
+
+        //Atribuindo funções como valor de atributo
+
+        function getData(){
+
+            return [this.nome,this.idade];
+
+        }
+
+        let jSON = {
+
+            nome:'Heitor Souza',
+            idade:18,
+            cor:'Laranja',
+            getData:getData // atribuindo a função como valor do atributo
+
+        }
+
+        console.log(jSON.getData());
+
+
+    </script>
+</body>
+</html>
