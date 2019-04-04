@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Info Number</title>
+</head>
+<body>
+    
+
+
+    <script>
+        
+        class infoNumber{
+
+            constructor(number){
+
+                this.setNumberInfo(number);
+
+            }
+
+            setNumberInfo(number){
+
+                let even = (number % 2 == 0);
+
+                let greaterThan = (number >= 100);
+                
+                let info = [];
+
+
+                if(even){
+
+                    info.push('par');
+
+                } else  {
+
+                    info.push('impar');
+
+                }
+
+                if(greaterThan){
+
+                    info.push('maior que 100');
+
+                } else{
+
+                    info.push('menor que 100');
+
+                }
+                
+                console.log('numero:'+number);
+                console.log(info);
+
+            }
+
+
+
+
+        }
+    
+    
+        let number = new infoNumber(91);
+    
+    
+    
+    </script>
+</body>
+</html>
+
+

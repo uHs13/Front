@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+
+   
+</head>
+
+<body>
+
+    <main>
+
+        <nav>
+
+            <ul>
+
+                <li class='branco'> <a href="#">Arroz</a> </li>
+                <li class='marrom'> <a href="#">Feijão</a> </li>
+                <li class='miscigenado'> <a href="#">Ovo</a> </li>
+
+            </ul>
+
+
+        </nav>
+
+        <section>
+
+            <li id='verde'> <a href="#">Alface</a> </li>
+            <li id='vermelho'> <a href="#">Tomate</a> </li>
+        
+        </section>
+
+
+    </main>
+
+    <script>
+
+        $(() => {
+
+            // $('nav ul li a').css({'color':'white','text-decoration':'none','padding':'5px 30px','font-weight':'bold'});
+           
+            // $('nav ul li a:first').css({'color':'purple','text-decoration':'none','padding':'5px 30px','font-weight':'normal'});
+           
+            // $('ul li').css({'margin':'0','padding':'0','display':'inline-block','width':'80px','text-align':'center','border-radius':'3px','background-color':'orange','padding':'3px 5px'});
+           
+            // alert('Essa página contém ' + $(' nav a').length + ' links dentro da navBar e outros ' +$('section a').length +' links fora da navBar');
+
+            $(()=>{
+
+                $('body').css({'background-color':'rgb(255, 240, 232)'});
+                
+                $('li[class="branco"] a').css({'background-color':'white','color':'black','text-decoration':'none'});
+                $('li[class="marrom"] a').css({'background-color':'brown','color':'white','text-decoration':'none'});
+                $('li[class="miscigenado"] a').css({'background-color':'#fff','color':'rgb(207, 207, 7)','text-decoration':'none'});
+                $('li[id="verde"] a').css({'background-color':'rgb(1, 129, 1)','color':'rgb(4, 197, 4)','text-decoration':'none'});
+                $('li[id="vermelho"] a').css({'background-color':'rgb(161, 61, 2)','color':'rgb(216, 83, 6)','text-decoration':'none'});
+
+
+
+
+            });
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>
