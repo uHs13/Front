@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Inserting Elements</title>
 
     <style>
@@ -17,9 +18,9 @@
 
 
         ul{
-
+            
             list-style:none;
-            margin:0;
+            margin:10px 10px;
             padding:0;
 
         }
@@ -27,13 +28,14 @@
         ul li{
 
             display: inline-block;
+            margin-right: 5px;
 
         }
 
         ul li img{
 
             width:300px;
-            height: 300px;
+            height: 200px;
             
 
         }
@@ -60,8 +62,10 @@
     
         $(()=>{
 
-
-
+            // $('<li><img src="../_res/trees.jpg"></li>').insertAfter('li:last-child');
+            // $('<li><img src="../_res/trees.jpg"></li>').insertBefore('li:last-child');
+            // $('<li><img src="../_res/trees.jpg"></li>').insertBefore('li:nth(1)');
+            $('<li><img src="../_res/trees.jpg"></li>').insertAfter('li:nth(0)');
 
         });
     

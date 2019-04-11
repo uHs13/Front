@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Change Attributes</title>
+
+    <style>
+    
+        body{
+
+            margin:0;
+            padding:0;
+
+        }
+
+        main{
+
+            width: 80%;
+            margin:0 auto;
+            
+        }
+
+        a img{
+
+            width:100%;
+            height: 553px;
+            margin:0 auto;
+            position: relative;
+            top:50px;
+
+        }
+
+        button{
+
+            position: absolute;
+            top:10px;
+            left:10px;
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <main>
+
+        <a href="../_res/cachoeiras.jpg" target='_blank'> <img src="../_res/winter-mountain.jpg" alt="Landscape"> </a>
+        <button title='button' id='btn'></button>
+    </main>
+
+    <script>
+    
+        $(()=>{
+
+            $('body').css({'background-color':'rgb(245,245,245)'})
+            $('img').attr('title','Winter Mountain').css({'box-shadow':'2px 2px 5px rgb(80,80,80)'});
+            $('button').text('Click').css({'border':'1px solid black','background-color':'#fff','border-radius':'3px','width':'100px','height':'25px','font-family':'Raleway','outline':'none'});
+            
+        });
+    
+    </script>
+
+</body>
+</html>

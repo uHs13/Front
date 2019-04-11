@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Catch Element</title>
+</head>
+<body>
+
+    <main>
+
+        <h1></h1>
+
+        <ul id='club-list'>
+
+            <li>Manchester United</li>
+            <li>Roma</li>
+            <li>Inter de Milão</li>
+            <li>Sassuolo</li>
+        
+        </ul>
+
+        <button></button>
+
+        <input type="submit">
+
+        <input type="text">
+
+    </main>
+
+    <script>
+    
+        $(()=>{
+
+            // $('h1').html('Clubes Europeus').css('color','lightgreen');//As duas meneiras adicionam texto aos elementos
+            $('h1').text('Clubes Europeus').css('color','lightgreen');
+
+            $('ul#club-list').append('<li> Manchester City </li>');//coloca no final
+            // $('ul#club-list').prepend('<li> Manchester City </li>');//coloca no inicio
+
+            $('button').text('Click');
+
+            $('input[type=submit]').val('Click');//altera o value do elemento
+
+            
+
+        })
+    
+    </script>
+
+</body> 
+</html>

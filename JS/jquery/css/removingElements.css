@@ -1,0 +1,23 @@
+body{
+
+    background-color: #fff;
+    margin:0;
+    padding:0;
+
+}
+
+table{
+
+    margin:100px auto;
+    box-shadow: 2px 2px 8px 1px rgb(168, 168, 168);
+    border-radius: 10px;
+    font-family: 'Raleway';
+
+}
+
+td a:hover{
+
+    text-decoration: none;
+   
+
+}
