@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Window Size</title>
+
+    <style>
+    
+        /* ::placeholder{
+
+            color:rgb(250, 230, 193); // troca a cor do placeholder
+
+        } */
+
+        section{
+
+            width:313px;
+            height: 813px;
+
+            background-color: rgb(255, 138, 29);
+
+            border:.5px solid rgb(83, 83, 83);
+            
+
+            box-shadow: 3px 3px 8px 2px rgba(100,100,100,.5);
+
+            position: absolute;
+
+            top:50%;
+            left:50%;
+
+            transform:translate(-50%,-50%);
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <main>
+
+        <!-- <p> Texto a ser capturado e exibido no console </p> -->
+        <!-- <input type="text" placeholder="texto"> -->
+
+        <section>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+
+
+    
+        $(()=>{
+            
+            // console.log($('p').text());//capturando o texto de um elemento e exibindo no console
+
+            console.log('Largura da janela: '+ $(window).width());
+            console.log('Altura da janela: '+ $(window).height());//janela é o que estamos vendo no navegador
+            
+            console.log('Largura do documento: '+ $(document).width());
+            console.log('Altura do documento: '+ $(document).height());//documento é o conteúdo da página
+
+
+         });
+
+        // let p = 0;
+        // let n = 1;
+
+        // while(n>0){
+
+        //     p*=10;// 0 10 101 1002
+        //     p+=n%10; // 1 10.1 101.01
+        //     n/=10; // 0.1  0.01  0.001
+        //     console.log('P:'+p);
+        //     console.log('N:'+n);
+
+        // }
+
+        // console.log(p);
+
+        // console.log(1*10);
+            
+    </script>
+</body>
+</html>

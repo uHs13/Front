@@ -103,7 +103,7 @@ section button:hover{
     color:#fff;
     cursor:pointer;
     box-shadow: 3px 3px 8px 2px rgb(100,100,100);
-    transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out,box-shadow .2s ease-in-out;
 
 }
 

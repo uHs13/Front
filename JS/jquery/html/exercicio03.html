@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+		<style>
+
+			body { margin:0; padding:0; }
+            nav {
+				
+				position:fixed;
+				width:78px;
+				padding:1px;
+				top:10px;
+				left:10px;
+				box-shadow:0 0 5px #000;
+				background-color:#000;
+				z-index:3;	
+
+			}
+			
+			nav ul { margin:0; padding:0; list-style:none }
+			nav li {
+
+				list-style-type:none; width:78px; height:78px;
+			 	background-repeat:no-repeat; margin-bottom:1px;
+				cursor:pointer;
+
+			}
+			
+			nav li:first-child 	{ background-image:url(../_res/futebol.png) } 
+			nav li:nth-child(2) { background-image:url(../_res/basquete.png) }
+			nav li:nth-child(3) { background-image:url(../_res/tenis.png) }
+			
+			#primeira{
+				
+				width:100%;
+				background-color:rebeccapurple;
+
+			}
+
+			#segunda{
+
+				width:100%;
+				background-color:sienna;
+
+			}
+
+			#terceira{
+
+				width:100%;
+				background-color:teal;
+
+			}
+
+
+        </style>
+         
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        
+
+    </head>
+    <body>
+
+		<nav>
+
+        	<ul>
+
+            	<li id="tela1"></li>
+				<li id="tela2"></li>
+				<li id="tela3"></li>
+				
+			</ul>
+			
+		</nav>
+		
+		<div id='primeira'></div>
+		
+		<div id='segunda'></div>
+
+		<div id='terceira'></div>
+
+
+		<script>		
+				
+				
+
+				//console.log('width:'+width+'\n'+'height:'+height);
+
+				$( ()=> { 	
+
+					function adapt(){
+					
+						let width = $(window).width();
+						let height = $(window).height();
+						
+						$('#primeira').css({'height':height});
+						$('#segunda').css({'height':height});
+						$('#terceira').css({'height':height});
+					
+					}
+
+					$('nav li:nth-child(2)').click(()=>{
+						//console.log($('#segunda').offset().top);
+						//console.log("entrou");
+				
+						$('html,body').animate({scrollTop:$('#segunda').offset().top},1000/*tempo em ms*/);//faz a tela rolar até o ponto onde inicia a segunda div
+						
+	
+					});
+
+					$('nav li:nth-child(1)').click(()=>{
+						console.log($('#primeira').offset().top);
+						//console.log("entrou");
+						$('html,body').animate({scrollTop:$('#primeira').offset().top},1000/*tempo em ms*/);//faz a tela rolar até o ponto onde inicia a primeira div
+						
+	
+					});
+
+					$('nav li:nth-child(3)').click(()=>{
+						console.log($('#terceira').offset().top);
+						//console.log("entrou");
+						$('html,body').animate({scrollTop:$('#terceira').offset().top},1000/*tempo em ms*/);//faz a tela rolar até o ponto onde inicia a primeira div
+						
+	
+					});
+
+					$(window).resize(()=>{
+
+						adapt();
+
+					});
+
+					adapt();
+
+	
+				});			
+	
+			</script>   
+
+    </body>
+</html>

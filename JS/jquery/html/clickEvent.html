@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Click Event</title>
+    <style>
+        body {
+
+            margin:0;
+            padding:0;
+            background: url(../_res/bg.jpg) no-repeat;
+            background-size:cover;
+
+
+        }
+
+        main {
+
+            font-family: 'Raleway';
+            width:90%;
+          
+
+
+        }
+
+        section{
+
+            position:absolute;
+            
+            top:50%;
+            left:50%;
+            
+            width:30%;
+           
+            
+            transform: translate(-50%,-50%);
+
+            background-color: rgba(200,200,200,.5);
+
+            border:1px solid rgba(121, 121, 121, 0.7);
+
+            border-radius: 5px;
+
+            box-sizing: border-box;
+
+            box-shadow: 3px 3px 8px 3px rgba(139, 137, 137, 0.8);
+
+            padding:40px;
+
+            
+
+        }
+
+        section h2 {
+
+           
+            width:90%;
+            margin:0 auto;
+
+            font-size: 20px;
+            
+            text-align: center;
+
+            margin-bottom:40px;
+
+            
+
+        }
+
+        section input{
+
+            width:100%;
+
+            padding:10px 4px;
+
+            margin-bottom:20px;
+            
+            font-size: 16px;
+            font-family: 'Raleway';
+            
+            box-sizing: border-box;
+
+            border:none;
+
+            border-bottom:2px solid transparent;
+
+            background-color: transparent;
+
+            outline:none;
+
+            transition:.5s;
+
+            
+            
+
+        }
+
+
+        section button{
+
+            width:100%;
+            height:35px;
+
+            border:1px solid rgba(12, 58, 3, 0.815);
+
+            color: rgba(12, 58, 3, 0.815);
+
+            border-radius: 5px;
+
+            background-color: transparent;
+
+            font-family: 'Raleway';
+
+            font-size: 15px;
+
+            outline:none;
+
+        }
+
+        section button:hover{
+
+            color:#fff;
+            background-color:rgba(12, 58, 3, 0.815);
+            cursor:pointer;
+            box-shadow: 3px 3px 8px 2px rgb(99, 98, 98);
+
+        }
+
+        section div{
+
+            position: relative;
+
+        }
+
+        section div label{
+
+            position:absolute;
+            top:10px;
+            left:0;
+            margin-left: 4px;
+            pointer-events: none;
+            color:rgb(110,110,110);
+            transition: .5s;
+
+        }
+
+        section input:focus ~label,
+        section input:valid ~ label{
+
+            top:-12px;
+            margin-left:0;
+            color:rgba(23, 75, 12, 0.815);
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        section input:focus,
+        section input:valid{
+
+            border-bottom-color: rgb(23, 75, 12);
+
+        }
+
+        #msg-box{
+
+            position:absolute;
+            
+            top:50%;
+            left:50%;
+            
+            width:30%;
+           
+            
+            transform: translate(-50%,-50%);
+
+            background-color: rgba(200,200,200,.5);
+
+            border:1px solid rgba(121, 121, 121, 0.7);
+
+            border-radius: 5px;
+
+            box-sizing: border-box;
+
+            box-shadow: 3px 3px 8px 3px rgba(139, 137, 137, 0.8);
+
+            padding:40px;
+
+            display:none;
+
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <section id='form-box'>
+
+            <h2> System Login </h2>
+
+            <form>
+
+                <div>
+
+                    <input type="text" id='name' required>
+                    <label for="name">Name</label>
+
+                </div>
+
+                <div>
+
+                    <input type="password" id='pass' required>
+                    <label for="pass">Password</label>
+
+                </div>
+
+                <div>
+
+                    <button id='btn-login'>Login</button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section id='msg-box'>
+
+            <button id='btn-back'>Return</button>
+
+        </section>
+
+    </main>
+
+    <script>
+        
+        $(()=>{
+
+
+            $('#btn-login').click((e)=>{
+
+                e.preventDefault();
+                $('#form-box').css({'display':'none'});
+                $('#msg-box').css({'display':'block'}).append('<ul id="info"></ul>');
+                $('#info').append('<li id="nm"></li>');
+                $('#nm').text($('#name').val());
+                $(`<li>${$('#pass').val()}</li>`).insertAfter('li:nth(0)');
+
+
+            });
+
+            $('#btn-back').click(()=>{
+
+                location.reload();
+
+
+            });
+
+        });
+        
+    </script>
+
+</body>
+
+</html>
