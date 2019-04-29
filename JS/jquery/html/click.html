@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Click</title>
+</head>
+<body>
+    <main>
+
+        <button id='btn-html'>HTML</button>
+        <button id='btn-css'>CSS</button>
+
+
+    </main>
+
+    <script>
+    
+        $('#btn-html').click(e=>{
+            console.log('clicou no botão '+ $('#btn-html').text());
+            // $('#btn-html').off();// Remove todos os eventos implementados para esse elemento
+        });
+        
+        $('#btn-css').on('click',e=>{
+            console.log('clicou no botão '+ $('#btn-css').text());
+        });
+        
+        
+    </script>
+</body>
+</html>

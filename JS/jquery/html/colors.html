@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Colors</title>
+</head>
+<style>
+
+    section
+    {
+
+        width: 300px;
+        height: 300px;
+        border: 1px solid rgb(77, 77, 77);
+        margin: 30px 30px;
+
+    }
+
+
+
+</style>
+<body>
+    <main>
+
+        <input type="color"  id="colors" value='#ffffff'>
+
+        <section></section>
+
+    </main>
+
+    <script>
+        
+        $('#colors').on('change',()=>{
+
+            $('section').css({
+
+                'background-color':$('#colors').val()
+
+            });
+
+        });
+        
+    
+    </script>
+</body>
+</html>
