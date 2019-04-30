@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Image Rotator</title>
+    <style>
+
+        body{
+            margin: 0;
+        }
+       
+        main {
+            position: absolute;
+            height: 200px;
+            width: 100%;
+            clip: rect(0 200px 200px 0);
+
+
+        }
+
+
+        section {
+
+            height: 200px;
+
+            position: relative;
+            top: 0;
+            left: 0;
+
+        }
+
+        section img {
+
+            float: left;
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <section>
+
+            <img src="../_res/cachoeiras.jpg" alt="cachoeiras" />
+            <img src="../_res/desert.jpg" alt="desert" />
+            <img src="../_res/lago_montanha.jpg" alt="lago_montanha" />
+            <img src="../_res/winter-mountain.jpg" alt="winter-mountain" />
+            <img src="../_res/oregon_hills.jpg" alt="winter-mountain" />
+           
+        </section>
+
+
+
+
+    </main>
+    <script>
+
+        $(() => {
+
+            let limit = $('section img').length * $('section img').width() * -1;;
+
+            $('section').append('<img src="../_res/cachoeiras.jpg" alt="cachoeiras"></img>');
+           
+            
+
+        
+
+            function movePhoto() {
+
+                $('section').animate({ left: '-=200' }, 1000, () => {
+
+                    $('p').html($('section').position().left);
+
+                    if ($('section').position().left == limit) {
+
+                        $('section').css('left', 0);
+
+                    }
+
+                });
+
+            }
+
+            setInterval(movePhoto, 2000);
+
+        });
+
+    </script>
+</body>
+
+</html>
