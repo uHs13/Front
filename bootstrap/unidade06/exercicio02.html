@@ -4,9 +4,17 @@
     <title>Curso de Bootstrap</title>
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/bootstrap-solid.jpg" type="image/x-icon">
+
+
+
+    <!-- Custom CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="_css/estilo.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -15,7 +23,7 @@
 
         <div class="row col-lg-10 offset-lg-1">
 
-            <form class="w-100">
+            <form class="w-100" method="POST" id="form">
 
                 <div class="form-row">
 
@@ -48,6 +56,33 @@
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="_js/script.js"></script>
+
+    <script>
+    
+        let form = document.querySelector("#form");
+
+        form.addEventListener('submit', (f) => {
+
+            f.preventDefault();
+
+            let inputs = form.querySelectorAll("input");
+
+            let json = {};
+
+            [...inputs].forEach(input => {
+
+                json[input.id] = input.value;
+
+            });
+
+            alert(JSON.stringify(json));
+
+        });
+
+
+    
+    </script>
+
 </body>
 
 </html>
