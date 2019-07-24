@@ -1,29 +1,51 @@
 <html>
-    <head>
-        <title>Curso de Bootstrap</title>
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="_css/estilo.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Digite abaixo seu codigo -->
-        <div class="container">
-            <button type="button">Menu Principal</button>
-            <ul">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="special-events.html">Special Events</a></li>
-                <li><a href="dvd.html">DVD</a></li>
-                <li><a href="location.htm">Location</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="review.html">Review</a></li>
-            </ul>    
+
+<head>
+    <title>DropDown Menu</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="_css/estilo.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Digite abaixo seu codigo -->
+    <div class="container-fluid">
+
+        <div class="row col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1 d-flex align-itens-center justify-content-center mt-5">
+
+            <div class="dropdown">
+
+                <button class="btn btn-outline-dark dropdown-toggle shadow-sm" data-toggle="dropdown">Gold</button>
+
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.youtube.com/watch?v=8h5VR_KF9iE" class="dropdown-item" target="_blank">Bang Bang</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=b00JeYE6Ie4" class="dropdown-item" target="_blank">Ghost</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=p6pepmOEoho" class="dropdown-item" target="_blank">Straight Ballin</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=2o2QbCTUJwQ" class="dropdown-item" target="_blank">Built for this</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=lc0zKB88XPM" class="dropdown-item" target="_blank">Poppin' then thangs</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ZevWMBfpD0Q" class="dropdown-item" target="_blank">You Know me</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=GSszWXkDHa8" class="dropdown-item" target="_blank">Work</a></li>
+                </ul>
+
+            </div>
+
         </div>
-        <!-- Fim do seu codigo -->
-        <script src="../js/jquery.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="_js/script.js"></script>
-    </body>
+
+    </div>
+    <!-- Fim do seu codigo -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="_js/script.js"></script>
+</body>
+
 </html>

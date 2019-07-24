@@ -1,25 +1,52 @@
 <html>
-    <head>
-        <title>Curso de Bootstrap</title>
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="_css/estilo.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Digite abaixo seu codigo -->
-        <div class="container">
-            <nav>
-                <button type="button" class="btn">Home</button>
-                <button type="button" class="btn">Info</button>
-                <button type="button" class="btn">Special Events</button>  
-                <button type="button" class="btn">DVD</button>
-            </nav>
-        </div>
-        <!-- Fim do seu codigo -->
-        <script src="../js/jquery.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="_js/script.js"></script>
-    </body>
+
+<head>
+    <title>Button Group</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="_css/estilo.css" rel="stylesheet">
+</head>
+
+<style>
+
+    .btn-orange {
+        background-color: orange;
+        color: #fff;
+    }
+
+    .btn-orange:hover {
+        background-color: white;
+        color: orange;
+    }
+
+</style>
+
+<body>
+    <!-- Digite abaixo seu codigo -->
+    <div class="container d-flex align-itens-center justify-content-center">
+
+        <nav class="navbar w-100">
+
+            <div class="btn-group w-100 shadow-sm">
+
+                <button class="btn btn-orange">Home</button>
+                <button class="btn btn-orange">Info</button>
+                <button class="btn btn-orange">Special Events</button>
+                <button class="btn btn-orange">DVD</button>
+                <button class="btn btn-orange">Miscellaneous</button>
+
+            </div>
+
+        </nav>
+
+    </div>
+    <!-- Fim do seu codigo -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="_js/script.js"></script>
+</body>
+
 </html>
