@@ -1,24 +1,60 @@
 <html>
-    <head>
-        <title>Curso de Bootstrap</title>
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=devide-width, initial-scale=1">
+
+<head>
+    <title>Curso de Bootstrap</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=devide-width, initial-scale=1">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="_css/estilo.css" rel="stylesheet">
+</head>
+
+    <style>
         
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="_css/estilo.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Digite abaixo seu codigo -->
+        body
+        {
+            background: url(_img/restaurant.jpeg) no-repeat center center;
+            background-size: cover;
+        }
 
-        <div class="container">
+        .card
+        {
 
-            <h2>Restaurant Review</h2>
-            <p>Francesco and Jane Bienni, founders and owners of San Francisco's world-class restaurant, have many reasons to celebrate. Cafe Townsend has been a San Francisco favorite for more than 19 years, and their latest restaurant venture, Cafe Isabella, will soon expand to more locations.</p>
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    
+    </style>
+
+<body>
+    <!-- Digite abaixo seu codigo -->
+
+    <div class="container">
+
+        <div class="card shadow" style="width: 19rem;">
+
+            <div class="card-body">
+                
+                <h4 class="text-center m-2 p-2">Restaurant Review</h2>
+               
+                <p class="text-justify">Francesco and Jane Bienni, founders and owners of San Francisco's world-class
+                    restaurant, have many reasons to celebrate. Cafe Townsend has been a San Francisco favorite for more
+                    than 19 years, and their latest restaurant venture, Cafe Isabella, will soon expand to more
+                    locations.
+                </p>
+
+            </div>
 
         </div>
-        <!-- Fim do seu codigo -->
-        <script src="../js/jquery.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="_js/script.js"></script>
-    </body>
+
+    </div>
+    <!-- Fim do seu codigo -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="_js/script.js"></script>
+</body>
+
 </html>
