@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form method="POST" id="form">
+
+        <label for="fname">Primeiro Nome</label>
+        <input type="text" id="fname">
+
+        <label for="fname">Sobrenome</label>
+        <input type="text" id="sname">
+
+        <button>Enviar</button>
+
+    </form>
+
+    <script>
+
+        document.querySelector("#form").addEventListener('submit', (e) => {
+
+            e.preventDefault();
+
+            let criarDeNome = (primeiroNome = "Heitor", ultimoNome = "Souza") => {
+
+                alert(primeiroNome + " " + ultimoNome);
+
+            };
+
+            let somar = (a, b) => {
+
+                alert(a + b);
+
+            }
+
+        criarDeNome(document.querySelector("#fname").value, document.querySelector("#sname").value);
+        somar(5, 5);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

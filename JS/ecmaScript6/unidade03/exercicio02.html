@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Circles</title>
+
+    <style>
+    
+        section div {
+
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            cursor: pointer;
+            float:left;
+            margin: 1px;
+
+        }
+    
+    </style>
+
+</head>
+<body>
+    
+    <section id="container">
+
+
+
+    </section>
+
+    <script>
+        
+        for (let i = 0; i < 47; i++) {
+
+            let circle = document.createElement("div");
+
+            if (i % 2 === 0) circle.style.backgroundColor = "gray";
+
+            circle.addEventListener("click", () => {
+
+                alert(`You clicked in the element number ${i}`);
+
+            });
+
+            document.querySelector("#container").appendChild(circle);
+
+        }
+
+    </script>
+</body>
+</html>
