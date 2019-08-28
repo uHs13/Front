@@ -1,12 +1,62 @@
-<html>
-    <head>
-        <title>Curso de EcmaScript 6.0</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
-        <script type="text/babel">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-        </script>
-    </head>
-    <body>
+    <style>
+        
+        .fl {
+
+            float: left;
+
+        }
     
-    </body>
+    </style>
+</head>
+<body>
+
+    <form id="form">
+
+        <div>
+
+            <label for="born">Ano de Nascimento</label>
+
+            <input type="text" id="born">
+
+            <button>Calcular</button>
+
+        </div>
+
+    </form>
+
+    <script>
+
+        document.querySelector("#form").addEventListener("submit", (e) => {
+
+            e.preventDefault();
+
+            let bornYear = document.querySelector("#born").value;
+
+            alert(calcRoughAge(bornYear));
+
+        });
+    
+        // const CONSTANTE = "VALORCONSTANTE";
+        // const CONSTANTE2 = "VALORCONSTANTE2";
+
+        // alert(CONSTANTE);
+        // alert(CONSTANTE2);
+        // console.log(CONSTANTE, CONSTANTE2);
+
+        function calcRoughAge(bornYear) {
+
+            return (bornYear.length > 0) ? new Date().getFullYear() - bornYear : "informe seu ano de nascimento";
+
+        }
+    
+    </script>
+</body>
 </html>
