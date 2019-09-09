@@ -1,12 +1,31 @@
-<html>
-    <head>
-        <title>Curso de EcmaScript 6.0</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
-        <script type="text/babel">
-
-        </script>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
     
-    </body>
+
+    <script>
+
+        let jogador = {
+
+            nome: "Pirlo",
+            habilidades : ["passe", "desarme", "chute", "cobrança de falta"],
+            escrever() {
+
+                //se usarmos somente nome o JS vai procurar por uma variável nome dentro do escopo da arrow function
+                console.log(this.nome, this.habilidades);
+
+            }
+
+        };
+
+        jogador.escrever();
+    
+    </script>
+</body>
 </html>
