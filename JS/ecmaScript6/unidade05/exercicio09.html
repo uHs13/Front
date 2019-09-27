@@ -1,16 +1,44 @@
-<html>
-    <head>
-        <title>Curso de EcmaScript 6.0</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
-
-        <script type="text/babel">
-        
-            
-
-        </script>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
     
-    </body>
+        function* liquidificar(ing) {
+
+           for (let i = 0; i < ing.length; i++) {
+
+                yield ing[i];
+
+           }
+
+        }
+
+        let ingredients = liquidificar(["leite", "banana", "maça", "aveia", "canela"]);
+
+        let fazerVitamina = setInterval( () => {
+
+            let vitamina = ingredients.next();
+
+            if (vitamina.done) {
+
+                clearInterval(fazerVitamina);
+
+                console.log("Pronto");
+
+            } else {
+
+                console.log(vitamina.value);
+
+            }
+
+        }, 1000); 
+
+    </script>
+</body>
 </html>
