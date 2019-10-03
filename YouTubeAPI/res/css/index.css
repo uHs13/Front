@@ -1,0 +1,21 @@
+body {
+
+    background: rgb(252, 252, 252);
+
+}
+
+div#janela ul {
+
+    width:480px;
+    margin:0 auto;
+    padding:0;
+
+}
+
+div#janela ul li {
+
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+
+}   
